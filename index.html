@@ -233,6 +233,105 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/16/gulp的创建和引用/" itemprop="url">
+                  gulp的创建和引用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-16T19:11:15+08:00" content="2016-05-16">
+              2016-05-16
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>###1、创建一个项目文件到你所想要盛放gulp的文件中</p>
+<p>###2、在终端中输入<br><em style="color:red" ;=""> sudo npm install  gulp -g(其中sudo是在mac系统下获取安装权限，而-g则是全局安装)</em></p>
+<p>###3、在终端输入npm install –global gulp</p>
+<p>####4、作为项目的开发依赖（devDependencies）安装,需要在在终端中输入：npm install –save-dev gulp（    </p><p style="color:green">其中–save-dev后边跟的为插件的插件名称，安装插件成功后可以在项目初始化的package.json中的devDependencies找到，若没有则表示你所想要安装的插件没有安装成功，具体如图所示：<img src="http://b.hiphotos.baidu.com/image/pic/item/d62a6059252dd42ab9fa8e42043b5bb5c8eab86c.jpg">###上图中的devDependencies下边就有：</p><p style="color:red">gulp-concat和gulp-jsmin两个插件</p><p></p>
+<p>####终端准备工作目前已经完成，接下来需要做的就是在你所创建的盛放gulp文件中创建一个</p><p style="color:red">gulpfile.js</p>文件切记是在文件的子文件第一层就创建，接下来我们的操作都需要在这个JS中执行了；打开此JS文件会看到如图所示：<img src="http://f.hiphotos.baidu.com/image/pic/item/bd3eb13533fa828b4b38140afa1f4134960a5ac4.jpg"><br>其中当我们需要引用什么插件的时候一定要先声明此插件名称<br>var 插件名称= require(‘gulp-插件名称’)，之后的如图所示：<br>我们拿gulp-concat（合并）这个插件来说吧，当当我们声明完这个插件<br>var contact = require(‘gulp-concat’)<br>固定套路：<br><p></p>
+<p>###gulp.task(‘hebing’,function(){<br>gulp.src(“js/*.js”)找寻JS文件下的所有js格式文件<br><br>.pipe(concat(“c.js”))把上边的两个JS格式文件合并为c.js<br><br>.pipe(gulp.dest(“js/“))把合并完的c.js输送到JS文件下，此处可自定义c.js所要去的文件位置（</p><p style="color:red" ;="">路径</p>），<br>})。<br>如需其他插件参照以上套路即可。<p></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/12/伪元素/" itemprop="url">
                   伪元素
                 </a>
@@ -642,7 +741,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
