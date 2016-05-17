@@ -84,28 +84,22 @@
 
 
 
-<meta name="description" content="###1、创建一个项目文件到你所想要盛放gulp的文件中
-###2、在终端中输入 sudo npm install  gulp -g(其中sudo是在mac系统下获取安装权限，而-g则是全局安装)
-###3、在终端输入npm install –global gulp
-####4、作为项目的开发依赖（devDependencies）安装,需要在在终端中输入：npm install –save-dev">
+<meta name="description" content="1、创建一个项目文件到你所想要盛放gulp的文件中2、在终端中输入 sudo npm install  gulp -g(其中sudo是在mac系统下获取安装权限，而-g则是全局安装)
+3、在终端输入npm install –global gulp4、作为项目的开发依赖（devDependencies）安装,需要在在终端中输入：npm install –save-dev gulp（    其中–sa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gulp的创建和引用">
 <meta property="og:url" content="http://yoursite.com/2016/05/16/gulp的创建和引用/index.html">
 <meta property="og:site_name" content="狂派威震天">
-<meta property="og:description" content="###1、创建一个项目文件到你所想要盛放gulp的文件中
-###2、在终端中输入 sudo npm install  gulp -g(其中sudo是在mac系统下获取安装权限，而-g则是全局安装)
-###3、在终端输入npm install –global gulp
-####4、作为项目的开发依赖（devDependencies）安装,需要在在终端中输入：npm install –save-dev">
-<meta property="og:image" content="http://b.hiphotos.baidu.com/image/pic/item/d62a6059252dd42ab9fa8e42043b5bb5c8eab86c.jpg">
-<meta property="og:image" content="http://f.hiphotos.baidu.com/image/pic/item/bd3eb13533fa828b4b38140afa1f4134960a5ac4.jpg">
-<meta property="og:updated_time" content="2016-05-16T13:32:22.000Z">
+<meta property="og:description" content="1、创建一个项目文件到你所想要盛放gulp的文件中2、在终端中输入 sudo npm install  gulp -g(其中sudo是在mac系统下获取安装权限，而-g则是全局安装)
+3、在终端输入npm install –global gulp4、作为项目的开发依赖（devDependencies）安装,需要在在终端中输入：npm install –save-dev gulp（    其中–sa">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/c3019e28jw1f3ydoyh16uj20mb0dnwh4.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/c3019e28jw1f3ydppoyyzj20js0g8dk7.jpg">
+<meta property="og:updated_time" content="2016-05-17T06:46:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gulp的创建和引用">
-<meta name="twitter:description" content="###1、创建一个项目文件到你所想要盛放gulp的文件中
-###2、在终端中输入 sudo npm install  gulp -g(其中sudo是在mac系统下获取安装权限，而-g则是全局安装)
-###3、在终端输入npm install –global gulp
-####4、作为项目的开发依赖（devDependencies）安装,需要在在终端中输入：npm install –save-dev">
-<meta name="twitter:image" content="http://b.hiphotos.baidu.com/image/pic/item/d62a6059252dd42ab9fa8e42043b5bb5c8eab86c.jpg">
+<meta name="twitter:description" content="1、创建一个项目文件到你所想要盛放gulp的文件中2、在终端中输入 sudo npm install  gulp -g(其中sudo是在mac系统下获取安装权限，而-g则是全局安装)
+3、在终端输入npm install –global gulp4、作为项目的开发依赖（devDependencies）安装,需要在在终端中输入：npm install –save-dev gulp（    其中–sa">
+<meta name="twitter:image" content="http://ww2.sinaimg.cn/large/c3019e28jw1f3ydoyh16uj20mb0dnwh4.jpg">
 
 
 
@@ -283,12 +277,8 @@
       
 
       
-        <p>###1、创建一个项目文件到你所想要盛放gulp的文件中</p>
-<p>###2、在终端中输入<br><em style="color:red" ;=""> sudo npm install  gulp -g(其中sudo是在mac系统下获取安装权限，而-g则是全局安装)</em></p>
-<p>###3、在终端输入npm install –global gulp</p>
-<p>####4、作为项目的开发依赖（devDependencies）安装,需要在在终端中输入：npm install –save-dev gulp（    </p><p style="color:green">其中–save-dev后边跟的为插件的插件名称，安装插件成功后可以在项目初始化的package.json中的devDependencies找到，若没有则表示你所想要安装的插件没有安装成功，具体如图所示：<img src="http://b.hiphotos.baidu.com/image/pic/item/d62a6059252dd42ab9fa8e42043b5bb5c8eab86c.jpg">###上图中的devDependencies下边就有：</p><p style="color:red">gulp-concat和gulp-jsmin两个插件</p><p></p>
-<p>####终端准备工作目前已经完成，接下来需要做的就是在你所创建的盛放gulp文件中创建一个</p><p style="color:red">gulpfile.js</p>文件切记是在文件的子文件第一层就创建，接下来我们的操作都需要在这个JS中执行了；打开此JS文件会看到如图所示：<img src="http://f.hiphotos.baidu.com/image/pic/item/bd3eb13533fa828b4b38140afa1f4134960a5ac4.jpg"><br>其中当我们需要引用什么插件的时候一定要先声明此插件名称<br>var 插件名称= require(‘gulp-插件名称’)，之后的如图所示：<br>我们拿gulp-concat（合并）这个插件来说吧，当当我们声明完这个插件<br>var contact = require(‘gulp-concat’)<br>固定套路：<br><p></p>
-<p>###gulp.task(‘hebing’,function(){<br>gulp.src(“js/*.js”)找寻JS文件下的所有js格式文件<br><br>.pipe(concat(“c.js”))把上边的两个JS格式文件合并为c.js<br><br>.pipe(gulp.dest(“js/“))把合并完的c.js输送到JS文件下，此处可自定义c.js所要去的文件位置（</p><p style="color:red" ;="">路径</p>），<br>})。<br>如需其他插件参照以上套路即可。<p></p>
+        <h3 id="1、创建一个项目文件到你所想要盛放gulp的文件中"><a href="#1、创建一个项目文件到你所想要盛放gulp的文件中" class="headerlink" title="1、创建一个项目文件到你所想要盛放gulp的文件中"></a>1、创建一个项目文件到你所想要盛放gulp的文件中</h3><h3 id="2、在终端中输入"><a href="#2、在终端中输入" class="headerlink" title="2、在终端中输入"></a>2、在终端中输入</h3><p><em style="color:red" ;=""> sudo npm install  gulp -g(其中sudo是在mac系统下获取安装权限，而-g则是全局安装)</em></p>
+<h3 id="3、在终端输入npm-install-–global-gulp"><a href="#3、在终端输入npm-install-–global-gulp" class="headerlink" title="3、在终端输入npm install –global gulp"></a>3、在终端输入npm install –global gulp</h3><h4 id="4、作为项目的开发依赖（devDependencies）安装-需要在在终端中输入：npm-install-–save-dev-gulp（-其中–save-dev后边跟的为插件的插件名称，安装插件成功后可以在项目初始化的package-json中的devDependencies找到，若没有则表示你所想要安装的插件没有安装成功，具体如图所示："><a href="#4、作为项目的开发依赖（devDependencies）安装-需要在在终端中输入：npm-install-–save-dev-gulp（-其中–save-dev后边跟的为插件的插件名称，安装插件成功后可以在项目初始化的package-json中的devDependencies找到，若没有则表示你所想要安装的插件没有安装成功，具体如图所示：" class="headerlink" title="4、作为项目的开发依赖（devDependencies）安装,需要在在终端中输入：npm install –save-dev gulp（    其中–save-dev后边跟的为插件的插件名称，安装插件成功后可以在项目初始化的package.json中的devDependencies找到，若没有则表示你所想要安装的插件没有安装成功，具体如图所示："></a>4、作为项目的开发依赖（devDependencies）安装,需要在在终端中输入：npm install –save-dev gulp（    <p style="color:green">其中–save-dev后边跟的为插件的插件名称，安装插件成功后可以在项目初始化的package.json中的devDependencies找到，若没有则表示你所想要安装的插件没有安装成功，具体如图所示：<img src="http://ww2.sinaimg.cn/large/c3019e28jw1f3ydoyh16uj20mb0dnwh4.jpg"></p></h4><h3 id="上图中的devDependencies下边就有：gulp-concat和gulp-jsmin两个插件"><a href="#上图中的devDependencies下边就有：gulp-concat和gulp-jsmin两个插件" class="headerlink" title="上图中的devDependencies下边就有：gulp-concat和gulp-jsmin两个插件"></a>上图中的devDependencies下边就有：<p style="color:red">gulp-concat和gulp-jsmin两个插件</p></h3><h4 id="终端准备工作目前已经完成，接下来需要做的就是在你所创建的盛放gulp文件中创建一个gulpfile-js文件切记是在文件的子文件第一层就创建，接下来我们的操作都需要在这个JS中执行了；打开此JS文件会看到如图所示：其中当我们需要引用什么插件的时候一定要先声明此插件名称var-插件名称-require-‘gulp-插件名称’-，之后的如图所示：我们拿gulp-concat（合并）这个插件来说吧，当当我们声明完这个插件var-contact-require-‘gulp-concat’-固定套路："><a href="#终端准备工作目前已经完成，接下来需要做的就是在你所创建的盛放gulp文件中创建一个gulpfile-js文件切记是在文件的子文件第一层就创建，接下来我们的操作都需要在这个JS中执行了；打开此JS文件会看到如图所示：其中当我们需要引用什么插件的时候一定要先声明此插件名称var-插件名称-require-‘gulp-插件名称’-，之后的如图所示：我们拿gulp-concat（合并）这个插件来说吧，当当我们声明完这个插件var-contact-require-‘gulp-concat’-固定套路：" class="headerlink" title="终端准备工作目前已经完成，接下来需要做的就是在你所创建的盛放gulp文件中创建一个gulpfile.js文件切记是在文件的子文件第一层就创建，接下来我们的操作都需要在这个JS中执行了；打开此JS文件会看到如图所示：其中当我们需要引用什么插件的时候一定要先声明此插件名称var 插件名称= require(‘gulp-插件名称’)，之后的如图所示：我们拿gulp-concat（合并）这个插件来说吧，当当我们声明完这个插件var contact = require(‘gulp-concat’)固定套路："></a>终端准备工作目前已经完成，接下来需要做的就是在你所创建的盛放gulp文件中创建一个<p style="color:red">gulpfile.js</p>文件切记是在文件的子文件第一层就创建，接下来我们的操作都需要在这个JS中执行了；打开此JS文件会看到如图所示：<img src="http://ww1.sinaimg.cn/large/c3019e28jw1f3ydppoyyzj20js0g8dk7.jpg"><br>其中当我们需要引用什么插件的时候一定要先声明此插件名称<br>var 插件名称= require(‘gulp-插件名称’)，之后的如图所示：<br>我们拿gulp-concat（合并）这个插件来说吧，当当我们声明完这个插件<br>var contact = require(‘gulp-concat’)<br>固定套路：<br></h4><h3 id="gulp-task-‘hebing’-function"><a href="#gulp-task-‘hebing’-function" class="headerlink" title="gulp.task(‘hebing’,function(){"></a>gulp.task(‘hebing’,function(){</h3><p>gulp.src(“js/*.js”)找寻JS文件下的所有js格式文件<br><br>.pipe(concat(“c.js”))把上边的两个JS格式文件合并为c.js<br><br>.pipe(gulp.dest(“js/“))把合并完的c.js输送到JS文件下，此处可自定义c.js所要去的文件位置（</p><p style="color:red" ;="">路径</p>），<br>})。<br>如需其他插件参照以上套路即可。<p></p>
 
       
     </div>
@@ -419,7 +409,7 @@
               
             
             
-              <p class="post-toc-empty">Dieser Artikel hat kein Inhaltsverzeichnis</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、创建一个项目文件到你所想要盛放gulp的文件中"><span class="nav-number">1.</span> <span class="nav-text">1、创建一个项目文件到你所想要盛放gulp的文件中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、在终端中输入"><span class="nav-number">2.</span> <span class="nav-text">2、在终端中输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、在终端输入npm-install-–global-gulp"><span class="nav-number">3.</span> <span class="nav-text">3、在终端输入npm install –global gulp</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4、作为项目的开发依赖（devDependencies）安装-需要在在终端中输入：npm-install-–save-dev-gulp（-其中–save-dev后边跟的为插件的插件名称，安装插件成功后可以在项目初始化的package-json中的devDependencies找到，若没有则表示你所想要安装的插件没有安装成功，具体如图所示："><span class="nav-number">3.1.</span> <span class="nav-text">4、作为项目的开发依赖（devDependencies）安装,需要在在终端中输入：npm install –save-dev gulp（    其中–save-dev后边跟的为插件的插件名称，安装插件成功后可以在项目初始化的package.json中的devDependencies找到，若没有则表示你所想要安装的插件没有安装成功，具体如图所示：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上图中的devDependencies下边就有：gulp-concat和gulp-jsmin两个插件"><span class="nav-number">4.</span> <span class="nav-text">上图中的devDependencies下边就有：gulp-concat和gulp-jsmin两个插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#终端准备工作目前已经完成，接下来需要做的就是在你所创建的盛放gulp文件中创建一个gulpfile-js文件切记是在文件的子文件第一层就创建，接下来我们的操作都需要在这个JS中执行了；打开此JS文件会看到如图所示：其中当我们需要引用什么插件的时候一定要先声明此插件名称var-插件名称-require-‘gulp-插件名称’-，之后的如图所示：我们拿gulp-concat（合并）这个插件来说吧，当当我们声明完这个插件var-contact-require-‘gulp-concat’-固定套路："><span class="nav-number">4.1.</span> <span class="nav-text">终端准备工作目前已经完成，接下来需要做的就是在你所创建的盛放gulp文件中创建一个gulpfile.js文件切记是在文件的子文件第一层就创建，接下来我们的操作都需要在这个JS中执行了；打开此JS文件会看到如图所示：其中当我们需要引用什么插件的时候一定要先声明此插件名称var 插件名称= require(‘gulp-插件名称’)，之后的如图所示：我们拿gulp-concat（合并）这个插件来说吧，当当我们声明完这个插件var contact = require(‘gulp-concat’)固定套路：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gulp-task-‘hebing’-function"><span class="nav-number">5.</span> <span class="nav-text">gulp.task(‘hebing’,function(){</span></a></li></ol></div>
             
           </div>
         </section>
